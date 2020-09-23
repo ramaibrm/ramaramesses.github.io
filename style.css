@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#title {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+body{
+    background-color: #1E282E;
+}
+#background {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+}
+#leftEnemy img{
+    position: relative;
+    width: 250px;
+    /* background-color: red; */
+    top: 650px;
+    left: 100px;
+    display: block;
+    animation: leftEnemyAnim 5s infinite;
+    content:0;
+}
+@keyframes leftEnemyAnim{
+    0%{top: 800px;}
+    100%{top: -150px;}
+}
+#frontEnemy img{
+    position: relative;
+    width: 250px;
+    /* background-color: red; */
+    top: 650px;
+    left: 200px;
+    display: block;
+    animation: frontEnemyAnim 8s infinite;
+    content:0;
+}
+@keyframes frontEnemyAnim{
+    0%{top: 800px;}
+    100%{top: -450px;}
+}
+#rightEnemy img{
+    position: relative;
+    width: 250px;
+    /* background-color: red; */
+    top: 650px;
+    left: 300px;
+    display: block;
+    animation: rightEnemyAnim 5s infinite;
+    content:0;
+}
+@keyframes rightEnemyAnim{
+    0%{top: 800px;}
+    100%{top: -700px;}
+}
+/* .enemy-move{
+    animation: enemyAnim 2s infinite;
+} */
+#gameScreen{
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 150px;
+    width: 450px;
+    height: 200px;
+}
+
+#game {
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 70px;
+    width: 600px;
+    height: 500px;
+    border: 10px solid brown;
+    z-index: 0;
+    /* display: none; */
+}
+
+#playerArea {
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    /* background-color: red; */
+}
+#punchAreaLeft {
+    /* background-color: blue; */
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    left: 270px;
+    top: 150px;
+}
+#punchAreaFront {
+    /* background-color: green; */
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    left: 350px;
+    top: 100px;
+}
+#punchAreaRight {
+    /* background-color: pink; */
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    left: 400px;
+    top: 100px;
+}
+#player img {
+    width: 200px;
+    margin: 0 200px;
+}
+
+.animate-rp{
+    animation:rightPunch 250ms;
+}
+@keyframes rightPunch {
+    0%{content: url("sprites/idle.png");}
+    100%{content:url("sprites/right-punch.png");}
+}
+.animate-lk{
+    animation:leftKick 250ms;
+}
+@keyframes leftKick {
+    0%{content: url("sprites/idle.png");}
+    100%{content:url("sprites/left-kick.png");}
+}
+.animate-fp{
+    animation:frontPunch 250ms;
+}
+@keyframes frontPunch {
+    0%{content: url("sprites/idle.png");}
+    100%{content:url("sprites/front-punch.png");}
+}
+
+#ground{
+    width: 660px;
+    position: relative;
+    height: 900px;
+    margin: 0 auto;
+    z-index: 97;
+    background-color:  #1E282E;
+    /* display: none; */
+}

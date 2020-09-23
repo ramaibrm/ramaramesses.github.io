@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Karate-Guy</title>
+</head>
+<body>
+    <!-- <embed src="Bishi Bashi Special Ost 9.mp3" autostart=true loop=false> -->
+        <audio src="Bishi Bashi Special Ost 9.mp3" style="display:none;" autoplay loop></audio>
+    <div id="title">
+        <h1>Rama Ibrahim's Karate Guy</h1>
+        <p>Press 'A' to kick left, 'S' to strike front, 'D' to punch right</p>
+    </div>
+    
+    <!-- <div id="gameScreen" onclick="activate()"><img src="7.png" /></div> -->
+    <div id="game" onclick="activate()">
+        <img id="background" src="sprites/area.png" />
+        <div id="playerArea">
+            <div id="player"><img src="sprites/idle.png"/></div>
+        </div>
+        <div id="punchAreaLeft"></div>
+        <div id="punchAreaRight"></div>
+        <div id="punchAreaFront"></div>
+        <div id="leftEnemy"><img src="sprites/left-enemy.gif"/></div>
+        <div id="frontEnemy"><img src="sprites/left-enemy.gif"/></div>
+        <div id="rightEnemy"><img src="sprites/left-enemy.gif"/></div>
+    </div>
+    <div id="ground"></div>
+    <script src="script.js"></script>
+</body>
+</html>
