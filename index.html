@@ -3,31 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Karate-Guy</title>
+    <link rel="stylesheet" href="style.css">;
+    <title>Document</title>
 </head>
 <body>
-    <!-- <embed src="Bishi Bashi Special Ost 9.mp3" autostart=true loop=false> -->
-        <audio src="Bishi Bashi Special Ost 9.mp3" style="display:none;" autoplay loop></audio>
-    <div id="title">
-        <h1>Rama Ibrahim's Karate Guy</h1>
-        <p>Press 'A' to kick left, 'S' to strike front, 'D' to punch right</p>
-    </div>
-    
-    <!-- <div id="gameScreen" onclick="activate()"><img src="7.png" /></div> -->
-    <div id="game" onclick="activate()">
-        <img id="background" src="sprites/area.png" />
-        <div id="playerArea">
-            <div id="player"><img src="sprites/idle.png"/></div>
+    <div id="content">
+        <h2 style="color:azure; text-align: center;">Before starting the game, please read the guide below first.</h2>
+        <h2 style="color:azure; text-align: center;">Keep striking/dodging until the bar highlight changes.</h2>
+        <h2 style="color:whitesmoke;" id="start">Press 'E' to start the game</h2>
+        <div id="game">
+            <div id="instructor">
+                <div id="hintbox"><img src="" /></div>
+            </div>
+            <div id="player"><img src="sprites/idle.png"></div>
+            <div id="enemy"><img src="sprites/enemy-idle.png"></div>
+            <div class="scores">
+                <div id="enemyScore"></div>
+            </div>
         </div>
-        <div id="punchAreaLeft"></div>
-        <div id="punchAreaRight"></div>
-        <div id="punchAreaFront"></div>
-        <div id="leftEnemy"><img src="sprites/left-enemy.gif"/></div>
-        <div id="frontEnemy"><img src="sprites/left-enemy.gif"/></div>
-        <div id="rightEnemy"><img src="sprites/left-enemy.gif"/></div>
+        <div class="tips">
+            <div class="control">
+                <h3>Controls</h3>
+                <p>Press "A" to <span style="color: blue">DODGE</span></p>
+                <p>Press "D" to <span style="color: red">STRIKE</span></p>
+                <h3>How to play</h3>
+                <p>You are playing as the <span style="color: red">red</span> robot</p>
+                <p>Hit <span style="color: red">STRIKE</span> when above bar says <span style="color: orangered">PUNCH!</span></p>
+                <p><span style="color: blue">DODGE</span> when the bar says <span style="color: rgb(15, 11, 240)">NO!</span></p>
+                <p style="color: rgb(255, 30, 0)">You will get hit if you do not follow the order!</p>
+            </div>
+            <div class="guide">
+                <img src="sprites/hint-punch.gif" />
+                <hr>
+                <img id="slide" src ="sprites/hint-parry.gif" />
+            </div>
+        </div>
+        <div class="strategy">
+            <h3>Important Hint, read first!</h3>
+            <p><span style="font-weight: bold; font-size: 20px;">You are required to STRIKE/DODGE multiple times until the above bar highlight changed</span>, otherwise you'll still get hit, but make sure you do it once in a while</p>
+            <p>Do not spam the controls, as it will make you more vulnerable.</p>
+            <p>Opponent mechanism will automatically lock your control and parry as you abuse the attack/dodge key</p>
+            <p>Dicipline is required</p>
+        </div>
+        <button type="button">RESTART</button>
+        </div>
     </div>
-    <div id="ground"></div>
-    <script src="script.js"></script>
+    <script src="dodgestrike.js"></script>
 </body>
 </html>
